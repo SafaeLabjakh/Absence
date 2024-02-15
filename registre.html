@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page d'Inscription</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #FFD54F, #D500F9);
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: pink;
+        }
+
+        .container {
+          width: 400px;
+          background-image: linear-gradient(to top, #f22b08, #26beec);
+            background-color: rgb(207, 147, 219);
+            background-repeat: no-repeat;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, select, button {
+            margin-top: 5px;
+            padding: 10px;
+            background-color: antiquewhite;
+        }
+
+        .btn {
+            border-radius: 30px;
+            color: #fff;
+            background-image: linear-gradient(to right, #FFD54F, #D500F9);
+            padding: 15px;
+            cursor: pointer;
+            border: none !important;
+            margin-top: 30px;
+            color: black;
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            background-image: linear-gradient(to right, #D500F9, #FFD54F);
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="inscription.php" method="post" enctype="multipart/form-data">
+            <h2>Signup</h2>
+            <label for="role">Sélectionnez votre rôle:</label>
+            <select name="role" id="role" required>
+                <option value="etudiant">Etudiant</option>
+                <option value="professeur">Professeur</option>
+            </select>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" placeholder="your last name" required>
+            <label for="prenom">prenom:</label>
+            <input type="text" id="prenom" name="prenom" placeholder="your first name" required>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="email" placeholder="your mail"required>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" placeholder="your password" required>
+            
+            <input type="file" name="image">
+            <button class="btn" name="env" type="submit">S'inscrire</button>
+        </form>
+    </div>
+</body>
+</html>
